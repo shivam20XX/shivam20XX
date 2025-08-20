@@ -31,6 +31,9 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
 </div>
 
 -----
-
+<div align="center">
+  
 ### Leetcode stats
+
 ![LeetCode Stats](https://leetcard.jacoblin.cool/sm20160168284?theme=forest&font=Cute%20Font&ext=heatmap)
+</div>
