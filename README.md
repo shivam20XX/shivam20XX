@@ -36,5 +36,6 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
   
 ### Leetcode stats
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/sm20160168284?theme=forest&font=Cute%20Font&ext=heatmap)
+![Leetcode](https://leetcard.jacoblin.cool/sm20160168284?theme=wtf&font=Big%20Shoulders%20Inline%20Text)
+
 </div>
