@@ -38,4 +38,11 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/sm20160168284?theme=unicorn&font=Zen%20Antique%20Soft&ext=heatmap)
 
+### GFG stats
+
+
+![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/sm20160ozen?theme=light)
+
+
+
 </div>
