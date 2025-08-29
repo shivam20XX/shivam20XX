@@ -23,7 +23,7 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
 
 
 
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)  
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=dracula)  
 
 ![Node.js](https://img.shields.io/badge/Node.js-43853D.svg?style=for-the-badge&logo=node.js&logoColor=white)  
 
@@ -39,7 +39,6 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/sm20160168284?theme=unicorn&font=Zen%20Antique%20Soft&ext=heatmap)
 
 ### GFG stats
-
 
 ![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/sm20160ozen?theme=light)
 
