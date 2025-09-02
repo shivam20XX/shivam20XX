@@ -40,7 +40,7 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
 
 ### GFG stats
 
-![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/sm20160ozen?theme=light)
+![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/shivam20xx?theme=light)
 
 
 
