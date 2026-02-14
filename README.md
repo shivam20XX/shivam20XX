@@ -42,6 +42,10 @@ Hi,everyone I'm a self learner and a future devloper.Currently i'm learning web 
 
 ![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/shivam20xx?theme=light)
 
-
-
 </div>
+
+---
+
+### 🎨 Theme Configuration
+
+Want to customize the themes? Check out the [Docker Theme Configuration Guide](DOCKER_THEMES.md) to learn where to place theme settings in the `docker-compose.yml` file.

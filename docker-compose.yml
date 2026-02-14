@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  github-profile:
+    image: nginx:alpine
+    container_name: github-profile-readme
+    environment:
+      # ===================================================================
+      # THEME CONFIGURATION REFERENCE
+      # ===================================================================
+      # This section demonstrates WHERE to place theme configurations
+      # in a Docker YAML file. Themes are placed in the 'environment' 
+      # section under each service definition.
+      #
+      # NOTE: These environment variables serve as a reference for theme
+      # values used in the README.md. For GitHub profile stats, themes
+      # are applied via URL parameters, not environment variables.
+      # ===================================================================
+      
+      # LeetCode Stats Theme (used in README.md)
+      # Available themes: light, dark, wtf, forest, unicorn, nord, etc.
+      LEETCODE_THEME: unicorn
+      LEETCODE_FONT: "Zen Antique Soft"
+      
+      # GeeksforGeeks Stats Theme (used in README.md)
+      # Available themes: light, dark
+      GFG_THEME: light
+      
+      # GitHub Profile Header Configuration (used in README.md)
+      # Customize colors using gradient values
+      HEADER_COLOR_LIST: "6,11,20"
+      HEADER_TYPE: waving
+    volumes:
+      - ./README.md:/usr/share/nginx/html/README.md:ro
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+# ===================================================================
+# ANSWER: Where do I place themes in Docker YAML file?
+# ===================================================================
+# Themes are placed in the 'environment:' section under each service.
+# 
+# For applications that consume environment variables:
+#   - The application reads theme values from process.env or similar
+#   - Changing these values will change the theme when app restarts
+#
+# For GitHub profile badges (like this example):
+#   - Themes are set via URL parameters in README.md
+#   - These environment variables serve as a centralized reference
+#   - To change themes: update both this file AND the URLs in README.md
+# ===================================================================
