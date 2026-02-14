@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  github-profile:
+    image: nginx:alpine
+    container_name: github-profile-readme
+    environment:
+      # Theme configurations are placed here in the environment section
+      # These can be used to customize the appearance of your GitHub profile
+      
+      # LeetCode Stats Theme
+      # Available themes: light, dark, wtf, forest, unicorn, etc.
+      LEETCODE_THEME: unicorn
+      LEETCODE_FONT: "Zen Antique Soft"
+      
+      # GeeksforGeeks Stats Theme
+      # Available themes: light, dark
+      GFG_THEME: light
+      
+      # GitHub Profile Header Theme
+      # You can customize colors using gradient values
+      HEADER_COLOR_LIST: "6,11,20"
+      HEADER_TYPE: waving
+    volumes:
+      - ./README.md:/usr/share/nginx/html/README.md:ro
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+# Theme Configuration Guide:
+# 
+# Themes are placed in the 'environment' section under each service.
+# 
+# To use different themes:
+# 1. Modify the environment variables above (e.g., LEETCODE_THEME: dark)
+# 2. Update your README.md to reference these environment variables
+# 3. Or directly change the theme parameter in the image URLs
+#
+# Example theme values:
+# - LeetCode: light, dark, wtf, forest, unicorn, nord, etc.
+# - GFG: light, dark
