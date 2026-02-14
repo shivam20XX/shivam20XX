@@ -5,20 +5,29 @@ services:
     image: nginx:alpine
     container_name: github-profile-readme
     environment:
-      # Theme configurations are placed here in the environment section
-      # These can be used to customize the appearance of your GitHub profile
+      # ===================================================================
+      # THEME CONFIGURATION REFERENCE
+      # ===================================================================
+      # This section demonstrates WHERE to place theme configurations
+      # in a Docker YAML file. Themes are placed in the 'environment' 
+      # section under each service definition.
+      #
+      # NOTE: These environment variables serve as a reference for theme
+      # values used in the README.md. For GitHub profile stats, themes
+      # are applied via URL parameters, not environment variables.
+      # ===================================================================
       
-      # LeetCode Stats Theme
-      # Available themes: light, dark, wtf, forest, unicorn, etc.
+      # LeetCode Stats Theme (used in README.md)
+      # Available themes: light, dark, wtf, forest, unicorn, nord, etc.
       LEETCODE_THEME: unicorn
       LEETCODE_FONT: "Zen Antique Soft"
       
-      # GeeksforGeeks Stats Theme
+      # GeeksforGeeks Stats Theme (used in README.md)
       # Available themes: light, dark
       GFG_THEME: light
       
-      # GitHub Profile Header Theme
-      # You can customize colors using gradient values
+      # GitHub Profile Header Configuration (used in README.md)
+      # Customize colors using gradient values
       HEADER_COLOR_LIST: "6,11,20"
       HEADER_TYPE: waving
     volumes:
@@ -27,15 +36,17 @@ services:
       - "8080:80"
     restart: unless-stopped
 
-# Theme Configuration Guide:
+# ===================================================================
+# ANSWER: Where do I place themes in Docker YAML file?
+# ===================================================================
+# Themes are placed in the 'environment:' section under each service.
 # 
-# Themes are placed in the 'environment' section under each service.
-# 
-# To use different themes:
-# 1. Modify the environment variables above (e.g., LEETCODE_THEME: dark)
-# 2. Update your README.md to reference these environment variables
-# 3. Or directly change the theme parameter in the image URLs
+# For applications that consume environment variables:
+#   - The application reads theme values from process.env or similar
+#   - Changing these values will change the theme when app restarts
 #
-# Example theme values:
-# - LeetCode: light, dark, wtf, forest, unicorn, nord, etc.
-# - GFG: light, dark
+# For GitHub profile badges (like this example):
+#   - Themes are set via URL parameters in README.md
+#   - These environment variables serve as a centralized reference
+#   - To change themes: update both this file AND the URLs in README.md
+# ===================================================================

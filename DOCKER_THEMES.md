@@ -62,11 +62,20 @@ services:
 
 ## How to Use Themes
 
+### Method 1: Applications that Consume Environment Variables
 1. **In docker-compose.yml**: Define theme environment variables in the `environment:` section
-2. **In your application**: Reference these environment variables to apply themes
-3. **Direct URL usage**: Or use the theme parameter directly in image URLs:
+2. **In your application code**: Reference these environment variables (e.g., `process.env.THEME_NAME`)
+3. **Restart the application**: The new theme values will be applied
+
+### Method 2: Direct URL Parameters (GitHub Profile Badges)
+For services like LeetCode Stats and GeeksforGeeks Stats that use URL parameters:
+1. **In docker-compose.yml**: Use environment variables as a reference/documentation
+2. **In your README.md or HTML**: Use the theme parameter directly in image URLs:
    - `https://leetcard.jacoblin.cool/username?theme=unicorn`
    - `https://gfgstatscard.vercel.app/username?theme=light`
+3. **Update both locations**: Keep the docker-compose.yml and URLs in sync for consistency
+
+> **Note**: The environment variables in docker-compose.yml serve as centralized theme documentation. For GitHub profile badges, the actual theme is applied via URL parameters.
 
 ## Key Points
 
